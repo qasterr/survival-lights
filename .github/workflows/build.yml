@@ -32,5 +32,4 @@ jobs:
           asset_name: survival_lights.zip
           asset_content_type: application/zip
       - name: delete zip file
-        run:
-          - rm survival_lights.zip
+        run: rm survival_lights.zip
