@@ -3,6 +3,9 @@ Use the light block in survival
 <br>
 <span style="color: #e84118; font-size: medium"><b>Only works in 1.19+</b></span>
 
+## Download
+Go to the [latest releases](https://github.com/qasterr/survival-lights/releases/latest) and download a file called `survival_lights.zip` from assets.
+
 ## Usage
 ### Craft the light block
 To craft light blocks, place a torch anywhere in the crafting grid as shown in the image below.
