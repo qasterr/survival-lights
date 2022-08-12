@@ -1,0 +1,16 @@
+name: Build
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Zip files
+        uses: vimtor/action-zip@v1
+        with:
+          dest: survival_lights.zip
