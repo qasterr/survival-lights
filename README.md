@@ -25,7 +25,7 @@ To craft light blocks, place a torch anywhere in the crafting grid as shown in t
 
 Due to some limitations survival has, you won't be able to break or view lights in survival.
 To circumvent that, rename a leather helmet into "View Lights".
-While it is equipped, light blocks in a 7-block radius will be displayed as torches, which you can see and break.
+While it is equipped, light blocks in a 7-block radius will be displayed as candles, which you can see and break.
 
 ### Set your desired light level
 
@@ -35,4 +35,4 @@ While holding a light block in your hand, enter the command `/trigger apply_ligh
 
 ### Place the light blocks
 
-While wearing the light viewer, place the light blocks wherever you want. The blocks will become torches while you are nearby, but as soon as you walk away or unequip the light viewer, they will return to normal.
+While wearing the light viewer, place the light blocks wherever you want. The blocks will become candles while you are nearby, but as soon as you walk away or unequip the light viewer, they will return to normal.
