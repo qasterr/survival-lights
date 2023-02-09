@@ -26,23 +26,23 @@ execute as @e[tag=light_level_15, scores={lifetime=40..}] at @s run setblock ~ ~
 
 execute as @e[tag=torch] if score @s lifetime matches 41.. run kill @s
 
-execute as @e[tag=torch, tag=!spawning] at @s unless block ~ ~ ~ torch if score @s lifetime matches ..40 run tag @s add broken
+execute as @e[tag=torch, tag=!spawning] at @s unless block ~ ~ ~ candle[lit=true] if score @s lifetime matches ..40 run tag @s add broken
 # Replace the dropped torch (if it exists) with a light block
-execute as @e[tag=broken, tag=light_level_1] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:torch"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 1}}}
-execute as @e[tag=broken, tag=light_level_2] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:torch"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 2}}}
-execute as @e[tag=broken, tag=light_level_3] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:torch"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 3}}}
-execute as @e[tag=broken, tag=light_level_4] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:torch"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 4}}}
-execute as @e[tag=broken, tag=light_level_5] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:torch"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 5}}}
-execute as @e[tag=broken, tag=light_level_6] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:torch"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 6}}}
-execute as @e[tag=broken, tag=light_level_7] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:torch"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 7}}}
-execute as @e[tag=broken, tag=light_level_8] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:torch"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 8}}}
-execute as @e[tag=broken, tag=light_level_9] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:torch"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 9}}}
-execute as @e[tag=broken, tag=light_level_10] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:torch"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 10}}}
-execute as @e[tag=broken, tag=light_level_11] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:torch"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 11}}}
-execute as @e[tag=broken, tag=light_level_12] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:torch"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 12}}}
-execute as @e[tag=broken, tag=light_level_13] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:torch"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 13}}}
-execute as @e[tag=broken, tag=light_level_14] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:torch"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 14}}}
-execute as @e[tag=broken, tag=light_level_15] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:torch"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 15}}}
+execute as @e[tag=broken, tag=light_level_1] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:candle"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 1}}}
+execute as @e[tag=broken, tag=light_level_2] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:candle"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 2}}}
+execute as @e[tag=broken, tag=light_level_3] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:candle"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 3}}}
+execute as @e[tag=broken, tag=light_level_4] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:candle"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 4}}}
+execute as @e[tag=broken, tag=light_level_5] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:candle"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 5}}}
+execute as @e[tag=broken, tag=light_level_6] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:candle"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 6}}}
+execute as @e[tag=broken, tag=light_level_7] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:candle"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 7}}}
+execute as @e[tag=broken, tag=light_level_8] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:candle"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 8}}}
+execute as @e[tag=broken, tag=light_level_9] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:candle"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 9}}}
+execute as @e[tag=broken, tag=light_level_10] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:candle"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 10}}}
+execute as @e[tag=broken, tag=light_level_11] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:candle"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 11}}}
+execute as @e[tag=broken, tag=light_level_12] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:candle"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 12}}}
+execute as @e[tag=broken, tag=light_level_13] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:candle"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 13}}}
+execute as @e[tag=broken, tag=light_level_14] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:candle"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 14}}}
+execute as @e[tag=broken, tag=light_level_15] at @s run data modify entity @e[type=item, nbt={Item:{id: "minecraft:candle"}}, distance=0..2, limit=1, sort=nearest] Item set value {id: "minecraft:light", Count: 1b, tag: {BlockStateTag: {level: 15}}}
 execute as @e[tag=broken] run kill @s
 
 # Thanks to https://technical-minecraft.fandom.com/wiki/Replacing_a_block_with_an_entity_(such_as_falling_sand)
@@ -61,5 +61,5 @@ execute as @a[tag=view] at @s run fill ~-7 ~-7 ~-7 ~7 ~7 ~7 command_block{auto: 
 execute as @a[tag=view] at @s run fill ~-7 ~-7 ~-7 ~7 ~7 ~7 command_block{auto: 1, Command: "/summon minecraft:armor_stand ~ ~-.5 ~ {NoGravity:1b,Invulnerable:1b,Small:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,PersistenceRequired:1b,Tags:['torch', 'light_level_13', 'spawning']}"} replace light[level=13]
 execute as @a[tag=view] at @s run fill ~-7 ~-7 ~-7 ~7 ~7 ~7 command_block{auto: 1, Command: "/summon minecraft:armor_stand ~ ~-.5 ~ {NoGravity:1b,Invulnerable:1b,Small:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,PersistenceRequired:1b,Tags:['torch', 'light_level_14', 'spawning']}"} replace light[level=14]
 execute as @a[tag=view] at @s run fill ~-7 ~-7 ~-7 ~7 ~7 ~7 command_block{auto: 1, Command: "/summon minecraft:armor_stand ~ ~-.5 ~ {NoGravity:1b,Invulnerable:1b,Small:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,PersistenceRequired:1b,Tags:['torch', 'light_level_15', 'spawning']}"} replace light[level=15]
-execute as @e[tag=spawning] at @s run setblock ~ ~ ~ torch
+execute as @e[tag=spawning] at @s run setblock ~ ~ ~ candle[lit=true]
 execute as @e[tag=spawning] run tag @s remove spawning
